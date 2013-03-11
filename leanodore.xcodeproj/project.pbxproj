@@ -1,0 +1,310 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E426542B16EE73E700C08FFA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E426542A16EE73E700C08FFA /* Cocoa.framework */; };
+		E426543516EE73E700C08FFA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E426543316EE73E700C08FFA /* InfoPlist.strings */; };
+		E426543716EE73E700C08FFA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E426543616EE73E700C08FFA /* main.m */; };
+		E426543B16EE73E700C08FFA /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E426543916EE73E700C08FFA /* Credits.rtf */; };
+		E426543E16EE73E700C08FFA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E426543D16EE73E700C08FFA /* AppDelegate.m */; };
+		E426544116EE73E700C08FFA /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E426543F16EE73E700C08FFA /* MainMenu.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E426542716EE73E700C08FFA /* leanodore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = leanodore.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E426542A16EE73E700C08FFA /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		E426542D16EE73E700C08FFA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		E426542E16EE73E700C08FFA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		E426542F16EE73E700C08FFA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E426543216EE73E700C08FFA /* leanodore-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "leanodore-Info.plist"; sourceTree = "<group>"; };
+		E426543416EE73E700C08FFA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E426543616EE73E700C08FFA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E426543816EE73E700C08FFA /* leanodore-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "leanodore-Prefix.pch"; sourceTree = "<group>"; };
+		E426543A16EE73E700C08FFA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		E426543C16EE73E700C08FFA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E426543D16EE73E700C08FFA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E426544016EE73E700C08FFA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E426542416EE73E600C08FFA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E426542B16EE73E700C08FFA /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E426541E16EE73E600C08FFA = {
+			isa = PBXGroup;
+			children = (
+				E426543016EE73E700C08FFA /* leanodore */,
+				E426542916EE73E700C08FFA /* Frameworks */,
+				E426542816EE73E700C08FFA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E426542816EE73E700C08FFA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E426542716EE73E700C08FFA /* leanodore.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E426542916EE73E700C08FFA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E426542A16EE73E700C08FFA /* Cocoa.framework */,
+				E426542C16EE73E700C08FFA /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E426542C16EE73E700C08FFA /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E426542D16EE73E700C08FFA /* AppKit.framework */,
+				E426542E16EE73E700C08FFA /* CoreData.framework */,
+				E426542F16EE73E700C08FFA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		E426543016EE73E700C08FFA /* leanodore */ = {
+			isa = PBXGroup;
+			children = (
+				E426543C16EE73E700C08FFA /* AppDelegate.h */,
+				E426543D16EE73E700C08FFA /* AppDelegate.m */,
+				E426543F16EE73E700C08FFA /* MainMenu.xib */,
+				E426543116EE73E700C08FFA /* Supporting Files */,
+			);
+			path = leanodore;
+			sourceTree = "<group>";
+		};
+		E426543116EE73E700C08FFA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E426543216EE73E700C08FFA /* leanodore-Info.plist */,
+				E426543316EE73E700C08FFA /* InfoPlist.strings */,
+				E426543616EE73E700C08FFA /* main.m */,
+				E426543816EE73E700C08FFA /* leanodore-Prefix.pch */,
+				E426543916EE73E700C08FFA /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E426542616EE73E600C08FFA /* leanodore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E426544416EE73E700C08FFA /* Build configuration list for PBXNativeTarget "leanodore" */;
+			buildPhases = (
+				E426542316EE73E600C08FFA /* Sources */,
+				E426542416EE73E600C08FFA /* Frameworks */,
+				E426542516EE73E600C08FFA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = leanodore;
+			productName = leanodore;
+			productReference = E426542716EE73E700C08FFA /* leanodore.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E426541F16EE73E600C08FFA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Steffen Tröster";
+			};
+			buildConfigurationList = E426542216EE73E600C08FFA /* Build configuration list for PBXProject "leanodore" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E426541E16EE73E600C08FFA;
+			productRefGroup = E426542816EE73E700C08FFA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E426542616EE73E600C08FFA /* leanodore */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E426542516EE73E600C08FFA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E426543516EE73E700C08FFA /* InfoPlist.strings in Resources */,
+				E426543B16EE73E700C08FFA /* Credits.rtf in Resources */,
+				E426544116EE73E700C08FFA /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E426542316EE73E600C08FFA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E426543716EE73E700C08FFA /* main.m in Sources */,
+				E426543E16EE73E700C08FFA /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E426543316EE73E700C08FFA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E426543416EE73E700C08FFA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		E426543916EE73E700C08FFA /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E426543A16EE73E700C08FFA /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		E426543F16EE73E700C08FFA /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E426544016EE73E700C08FFA /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E426544216EE73E700C08FFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		E426544316EE73E700C08FFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		E426544516EE73E700C08FFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "leanodore/leanodore-Prefix.pch";
+				INFOPLIST_FILE = "leanodore/leanodore-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E426544616EE73E700C08FFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "leanodore/leanodore-Prefix.pch";
+				INFOPLIST_FILE = "leanodore/leanodore-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E426542216EE73E600C08FFA /* Build configuration list for PBXProject "leanodore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E426544216EE73E700C08FFA /* Debug */,
+				E426544316EE73E700C08FFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E426544416EE73E700C08FFA /* Build configuration list for PBXNativeTarget "leanodore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E426544516EE73E700C08FFA /* Debug */,
+				E426544616EE73E700C08FFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E426541F16EE73E600C08FFA /* Project object */;
+}
