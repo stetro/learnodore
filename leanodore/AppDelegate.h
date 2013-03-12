@@ -9,6 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import <AudioToolbox/AudioToolbox.h>
 #import "ClockView.h"
+#import "PreferencesController.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
@@ -17,12 +18,13 @@
 @property (assign) IBOutlet NSButton *startButton;
 @property (assign) IBOutlet NSTextField *minuteField;
 @property (assign) IBOutlet NSTextField *secondField;
+
 @property BOOL running;
 @property NSTimer *timer;
 @property ClockView *clockview;
+@property PreferencesController *preferencesController;
 
-
--(IBAction)startOrStopSessionButton:(id)sender;
 -(IBAction)openPreferences:(id)sender;
+-(IBAction)startOrStopSessionButton:(id)sender;
 
 @end

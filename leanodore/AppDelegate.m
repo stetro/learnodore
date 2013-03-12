@@ -41,7 +41,11 @@
 
 -(IBAction)openPreferences:(id)sender
 {
-    
+    if(!self.preferencesController)
+    {
+        self.preferencesController = [[PreferencesController alloc] initWithWindowNibName:@"PreferencesController"];
+    }
+    [self.preferencesController showWindow:self];
 }
 
 - (void)setGrayBackgroundWith: (CGFloat) brightness
