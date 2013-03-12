@@ -12,7 +12,10 @@
 		E426543716EE73E700C08FFA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E426543616EE73E700C08FFA /* main.m */; };
 		E426543B16EE73E700C08FFA /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E426543916EE73E700C08FFA /* Credits.rtf */; };
 		E426543E16EE73E700C08FFA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E426543D16EE73E700C08FFA /* AppDelegate.m */; };
-		E426544116EE73E700C08FFA /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E426543F16EE73E700C08FFA /* MainMenu.xib */; };
+		E426544916EE74C800C08FFA /* ClockView.m in Sources */ = {isa = PBXBuildFile; fileRef = E426544816EE74C800C08FFA /* ClockView.m */; };
+		E42EFE3B16EF1A8000E95756 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E42EFE3A16EF1A8000E95756 /* AudioToolbox.framework */; };
+		E4582A4F16EE9300007BB57B /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = E4582A4E16EE9300007BB57B /* Icon.icns */; };
+		E495630216EE86D200A096DF /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E426543F16EE73E700C08FFA /* MainMenu.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,10 @@
 		E426543C16EE73E700C08FFA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E426543D16EE73E700C08FFA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E426544016EE73E700C08FFA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		E426544716EE74C800C08FFA /* ClockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClockView.h; sourceTree = "<group>"; };
+		E426544816EE74C800C08FFA /* ClockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClockView.m; sourceTree = "<group>"; };
+		E42EFE3A16EF1A8000E95756 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		E4582A4E16EE9300007BB57B /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E42EFE3B16EF1A8000E95756 /* AudioToolbox.framework in Frameworks */,
 				E426542B16EE73E700C08FFA /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -46,6 +54,8 @@
 		E426541E16EE73E600C08FFA = {
 			isa = PBXGroup;
 			children = (
+				E42EFE3A16EF1A8000E95756 /* AudioToolbox.framework */,
+				E4582A4E16EE9300007BB57B /* Icon.icns */,
 				E426543016EE73E700C08FFA /* leanodore */,
 				E426542916EE73E700C08FFA /* Frameworks */,
 				E426542816EE73E700C08FFA /* Products */,
@@ -86,6 +96,8 @@
 				E426543D16EE73E700C08FFA /* AppDelegate.m */,
 				E426543F16EE73E700C08FFA /* MainMenu.xib */,
 				E426543116EE73E700C08FFA /* Supporting Files */,
+				E426544716EE74C800C08FFA /* ClockView.h */,
+				E426544816EE74C800C08FFA /* ClockView.m */,
 			);
 			path = leanodore;
 			sourceTree = "<group>";
@@ -155,7 +167,8 @@
 			files = (
 				E426543516EE73E700C08FFA /* InfoPlist.strings in Resources */,
 				E426543B16EE73E700C08FFA /* Credits.rtf in Resources */,
-				E426544116EE73E700C08FFA /* MainMenu.xib in Resources */,
+				E495630216EE86D200A096DF /* MainMenu.xib in Resources */,
+				E4582A4F16EE9300007BB57B /* Icon.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,6 +181,7 @@
 			files = (
 				E426543716EE73E700C08FFA /* main.m in Sources */,
 				E426543E16EE73E700C08FFA /* AppDelegate.m in Sources */,
+				E426544916EE74C800C08FFA /* ClockView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +317,7 @@
 				E426544616EE73E700C08FFA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
