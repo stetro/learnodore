@@ -10,5 +10,5 @@
 
 @interface ClockView : NSView
 @property CGFloat percent;
-
+@property BOOL green;
 @end

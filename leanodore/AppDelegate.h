@@ -23,6 +23,9 @@
 @property NSTimer *timer;
 @property ClockView *clockview;
 @property PreferencesController *preferencesController;
+@property NSInteger minutes;
+@property float stepsize;
+@property BOOL working;
 
 -(IBAction)openPreferences:(id)sender;
 -(IBAction)startOrStopSessionButton:(id)sender;

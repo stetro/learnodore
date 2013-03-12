@@ -24,11 +24,16 @@
     return self;
 }
 
+-(IBAction)formatMinutes:(id)sender{
+    NSInteger i = [[NSUserDefaults standardUserDefaults] integerForKey:@"minutes"];
+    [[NSUserDefaults standardUserDefaults] setInteger:i forKey:@"minutes"];
+    NSInteger j = [[NSUserDefaults standardUserDefaults] integerForKey:@"procrastinationminutes"];
+    [[NSUserDefaults standardUserDefaults] setInteger:j forKey:@"procrastinationminutes"];
+}
+
 - (void)windowDidLoad
 {
     [super windowDidLoad];
-    
-    // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
 }
 
 @end

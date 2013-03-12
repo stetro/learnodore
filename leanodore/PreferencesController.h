@@ -9,5 +9,5 @@
 #import <Cocoa/Cocoa.h>
 
 @interface PreferencesController : NSWindowController
-
+-(IBAction)formatMinutes:(id)sender;
 @end
