@@ -8,12 +8,12 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "leanodore/AppDelegate.m"
-         timestampString = "384804586.245011"
+         timestampString = "384858902.162355"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "47"
-         endingLineNumber = "47"
-         landmarkName = "-openPreferences:"
+         startingLineNumber = "48"
+         endingLineNumber = "48"
+         landmarkName = "-updateClockView"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -21,25 +21,25 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "leanodore/AppDelegate.m"
-         timestampString = "384807458.61587"
+         timestampString = "384858902.162355"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "120"
+         endingLineNumber = "120"
+         landmarkName = "-startTimer"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "leanodore/AppDelegate.m"
+         timestampString = "384858902.162355"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "119"
          endingLineNumber = "119"
-         landmarkName = "-startOrStopSessionButton:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "leanodore/AppDelegate.m"
-         timestampString = "384807458.61587"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "118"
-         endingLineNumber = "118"
-         landmarkName = "-startOrStopSessionButton:"
+         landmarkName = "-startTimer"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

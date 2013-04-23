@@ -19,6 +19,7 @@
         [[NSUserDefaults standardUserDefaults] setInteger:5 forKey:@"minminutes"];
         [[NSUserDefaults standardUserDefaults] setInteger:100 forKey:@"maxminutes"];
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"selfPaused"];
+        [[NSUserDefaults standardUserDefaults] setValue:@"/System/Library/Sounds/Glass.aiff" forKey:@"signalPath"];
     }
     return self;
 }
@@ -66,8 +67,9 @@
     self.window.backgroundColor = [NSColor colorWithSRGBRed:brightness green:brightness blue:brightness alpha: 1.0];
 }
 
-- (void)playSound
+- (void)notify
 {
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"Test !" object:self];
     NSSound *systemSound = [[NSSound alloc] initWithContentsOfFile:@"/System/Library/Sounds/Glass.aiff" byReference:YES];
     if (systemSound) {
         [systemSound play];
@@ -78,7 +80,7 @@
 {
     self.clockview.percent += self.stepsize;
     if(self.clockview.percent >= 1){
-        [self playSound];
+        [self notify];
         [self stopTimer];
         [self restartTimerIfNecessary];
         return;
