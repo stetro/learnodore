@@ -8,6 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
+
 @interface ClockView : NSView
 @property CGFloat percent;
 @property BOOL green;

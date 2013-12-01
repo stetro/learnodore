@@ -11,7 +11,7 @@
 #import "ClockView.h"
 #import "PreferencesController.h"
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
+@interface AppDelegate : NSObject <NSApplicationDelegate, NSUserNotificationCenterDelegate>
 
 
 @property (assign) IBOutlet NSWindow *window;

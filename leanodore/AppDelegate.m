@@ -13,13 +13,16 @@
 
 -(id)init{
     self = [super init];
+
     if(self){
+        [[NSUserDefaultsController sharedUserDefaultsController] setAppliesImmediately:true];
         [[NSUserDefaults standardUserDefaults] setInteger:25 forKey:@"minutes"];
         [[NSUserDefaults standardUserDefaults] setInteger:10 forKey:@"procrastinationminutes"];
         [[NSUserDefaults standardUserDefaults] setInteger:5 forKey:@"minminutes"];
         [[NSUserDefaults standardUserDefaults] setInteger:100 forKey:@"maxminutes"];
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"selfPaused"];
         [[NSUserDefaults standardUserDefaults] setValue:@"/System/Library/Sounds/Glass.aiff" forKey:@"signalPath"];
+        
     }
     return self;
 }
@@ -48,6 +51,7 @@
 {
     long minutes = ((1 - self.clockview.percent) * self.minutes);
     long seconds = (((1 - self.clockview.percent) * self.minutes)-minutes) * 60;
+    [[[NSApplication sharedApplication] dockTile]setBadgeLabel:[NSString stringWithFormat:@"%02i:%02i",(int) minutes,(int)seconds]];
     [self.minuteField setStringValue:[NSString stringWithFormat:@"%02i",(int) minutes]];
     [self.secondField setStringValue:[NSString stringWithFormat:@"%02i",(int) seconds]];
     [self.clockview setNeedsDisplay:YES];
@@ -67,9 +71,29 @@
     self.window.backgroundColor = [NSColor colorWithSRGBRed:brightness green:brightness blue:brightness alpha: 1.0];
 }
 
+- (BOOL)userNotificationCenter:(NSUserNotificationCenter *)center shouldPresentNotification:(NSUserNotification *) notification
+{
+    return true;
+}
+
 - (void)notify
 {
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"Test !" object:self];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"MyNotification" object:self];
+    
+    NSUserNotificationCenter *nc = [NSUserNotificationCenter defaultUserNotificationCenter];
+    NSUserNotification *nf = [[NSUserNotification alloc]init];
+    nc.delegate = self;
+    if(self.working){
+        nf.title = @"Learnodore";
+        nf.subtitle =[ NSString stringWithFormat: @"Du hast nun %02i Minuten Pause.",
+                      (int)[[NSUserDefaults standardUserDefaults] integerForKey:@"procrastinationminutes"]] ;
+    }else{
+        nf.title = @"Learnodore";
+        nf.subtitle =[ NSString stringWithFormat:@"Du solltest nun deine Arbeit für %02i minuten wieder aufnehmen.",
+                      (int)[[NSUserDefaults standardUserDefaults] integerForKey:@"minues"]] ;
+    }
+    [nc deliverNotification:nf];
+    
     NSSound *systemSound = [[NSSound alloc] initWithContentsOfFile:@"/System/Library/Sounds/Glass.aiff" byReference:YES];
     if (systemSound) {
         [systemSound play];
@@ -116,7 +140,7 @@
         self.minutes = [[NSUserDefaults standardUserDefaults] integerForKey:@"procrastinationminutes"];
         self.clockview.green = YES;
     }
-
+    
     self.stepsize = 1.0/(float)(self.minutes * 60 * 4);
     self.clockview.percent  = 0.00;
     self.running = YES;
@@ -131,7 +155,7 @@
         [self stopTimer];
     }
     else{
-        [self startTimer];   
+        [self startTimer];
     }
 }
 
