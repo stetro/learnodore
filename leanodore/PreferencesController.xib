@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="4510" systemVersion="13A603" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment defaultVersion="1080" identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="4514"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="4510"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="PreferencesController">
@@ -16,7 +16,7 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" texturedBackground="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="196" y="240" width="314" height="260"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="878"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="778"/>
             <value key="minSize" type="size" width="314" height="209"/>
             <value key="maxSize" type="size" width="314" height="209"/>
             <view key="contentView" id="2">
@@ -47,9 +47,8 @@
                     <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="37">
                         <rect key="frame" x="18" y="189" width="278" height="26"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <sliderCell key="cell" continuous="YES" alignment="left" minValue="5" maxValue="100" doubleValue="60.516851756198349" tickMarkPosition="above" numberOfTickMarks="10" sliderType="linear" id="38"/>
+                        <sliderCell key="cell" continuous="YES" alignment="left" minValue="5" maxValue="100" doubleValue="60" tickMarkPosition="above" numberOfTickMarks="20" allowsTickMarkValuesOnly="YES" sliderType="linear" id="38"/>
                         <connections>
-                            <action selector="formatMinutes:" target="-2" id="64"/>
                             <binding destination="24" name="maxValue" keyPath="values.maxminutes" id="50"/>
                             <binding destination="24" name="minValue" keyPath="values.minminutes" previousBinding="50" id="54"/>
                             <binding destination="24" name="value" keyPath="values.minutes" previousBinding="54" id="55"/>
@@ -67,13 +66,12 @@
                     <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="79">
                         <rect key="frame" x="18" y="86" width="278" height="26"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <sliderCell key="cell" continuous="YES" alignment="left" minValue="5" maxValue="100" doubleValue="43.450470559845563" tickMarkPosition="above" numberOfTickMarks="10" sliderType="linear" id="80"/>
+                        <sliderCell key="cell" continuous="YES" alignment="left" minValue="5" maxValue="100" doubleValue="45" tickMarkPosition="above" numberOfTickMarks="20" allowsTickMarkValuesOnly="YES" sliderType="linear" id="80"/>
                         <connections>
-                            <action selector="formatMinutes:" target="-2" id="85"/>
-                            <binding destination="24" name="enabled" keyPath="values.selfPaused" id="132"/>
                             <binding destination="24" name="maxValue" keyPath="values.maxminutes" id="82"/>
                             <binding destination="24" name="minValue" keyPath="values.minminutes" previousBinding="82" id="83"/>
                             <binding destination="24" name="value" keyPath="values.procrastinationminutes" previousBinding="83" id="97"/>
+                            <binding destination="24" name="enabled" keyPath="values.selfPaused" id="132"/>
                         </connections>
                     </slider>
                     <box autoresizesSubviews="NO" verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="265">
@@ -92,8 +90,8 @@
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                         <connections>
-                            <binding destination="24" name="enabled" keyPath="values.selfPaused" id="130"/>
                             <binding destination="24" name="value" keyPath="values.procrastinationminutes" id="103"/>
+                            <binding destination="24" name="enabled" keyPath="values.selfPaused" id="130"/>
                         </connections>
                     </textField>
                     <button translatesAutoresizingMaskIntoConstraints="NO" id="119">
