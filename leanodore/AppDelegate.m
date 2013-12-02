@@ -11,18 +11,14 @@
 
 @implementation AppDelegate
 
+
+
 -(id)init{
     self = [super init];
 
     if(self){
-        [[NSUserDefaultsController sharedUserDefaultsController] setAppliesImmediately:true];
-        [[NSUserDefaults standardUserDefaults] setInteger:25 forKey:@"minutes"];
-        [[NSUserDefaults standardUserDefaults] setInteger:10 forKey:@"procrastinationminutes"];
-        [[NSUserDefaults standardUserDefaults] setInteger:5 forKey:@"minminutes"];
-        [[NSUserDefaults standardUserDefaults] setInteger:100 forKey:@"maxminutes"];
-        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"selfPaused"];
-        [[NSUserDefaults standardUserDefaults] setValue:@"/System/Library/Sounds/Glass.aiff" forKey:@"signalPath"];
-        
+        [self setupDefaults];
+        [self registerNotifications];
     }
     return self;
 }
@@ -39,6 +35,7 @@
     NSButton *button = [self.window standardWindowButton:NSWindowCloseButton];
     [button setTarget:self];
     [button setAction:@selector(closeApplication)];
+    [self initialViewSetup];
 }
 
 - (void) closeApplication
@@ -58,7 +55,7 @@
 }
 
 -(IBAction)openPreferences:(id)sender
-{
+{    
     if(!self.preferencesController)
     {
         self.preferencesController = [[PreferencesController alloc] initWithWindowNibName:@"PreferencesController"];
@@ -162,6 +159,46 @@
 - (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)theApplication {
     self.running = NO;
     return YES;
+}
+
+#pragma mark - Helper
+
+- (void)setupDefaults
+{
+    [[NSUserDefaultsController sharedUserDefaultsController] setAppliesImmediately:true];
+
+    BOOL startedFirstTime = ![[NSUserDefaults standardUserDefaults] boolForKey:@"firstStart"];
+
+    if (startedFirstTime) {
+        [[NSUserDefaults standardUserDefaults] setInteger:25 forKey:@"minutes"];
+        [[NSUserDefaults standardUserDefaults] setInteger:10 forKey:@"procrastinationminutes"];
+        [[NSUserDefaults standardUserDefaults] setInteger:5 forKey:@"minminutes"];
+        [[NSUserDefaults standardUserDefaults] setInteger:100 forKey:@"maxminutes"];
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"selfPaused"];
+        [[NSUserDefaults standardUserDefaults] setValue:@"/System/Library/Sounds/Glass.aiff" forKey:@"signalPath"];
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"firstStart"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
+}
+
+- (void)registerNotifications
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self
+               selector:@selector(initialViewSetup)
+                   name:NSUserDefaultsDidChangeNotification
+                 object:nil];
+}
+
+- (void)initialViewSetup
+{
+    if (!self.running) {
+        NSUInteger minutes = [[NSUserDefaults standardUserDefaults] integerForKey:@"minutes"];
+        NSUInteger seconds = 0;
+        [[[NSApplication sharedApplication] dockTile]setBadgeLabel:[NSString stringWithFormat:@"%02lu:%02lu", (unsigned long)minutes,(unsigned long)seconds]];
+        [self.minuteField setStringValue:[NSString stringWithFormat:@"%02lu", (unsigned long)minutes]];
+        [self.secondField setStringValue:[NSString stringWithFormat:@"%02lu", (unsigned long)seconds]];
+        [self.clockview setNeedsDisplay:YES];
+    }
 }
 
 @end

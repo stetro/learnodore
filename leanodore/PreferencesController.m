@@ -18,17 +18,10 @@
 {
     self = [super initWithWindow:window];
     if (self) {
-        // Initialization code here.
+
     }
     
     return self;
-}
-
--(IBAction)formatMinutes:(id)sender{
-    NSInteger i = [[NSUserDefaults standardUserDefaults] integerForKey:@"minutes"];
-    [[NSUserDefaults standardUserDefaults] setInteger:i forKey:@"minutes"];
-    NSInteger j = [[NSUserDefaults standardUserDefaults] integerForKey:@"procrastinationminutes"];
-    [[NSUserDefaults standardUserDefaults] setInteger:j forKey:@"procrastinationminutes"];
 }
 
 - (void)windowDidLoad
