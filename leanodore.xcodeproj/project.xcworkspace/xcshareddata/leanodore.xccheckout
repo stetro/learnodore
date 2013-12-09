@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>2F7F98D3-5977-4140-8A8D-68EFD6CFCA3C</string>
+	<key>IDESourceControlProjectName</key>
+	<string>leanodore</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>A79BDA5B-D364-4C6F-A670-2A572CB96E6C</key>
+		<string>ssh://github.com/stetro/learnodore.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>leanodore.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>A79BDA5B-D364-4C6F-A670-2A572CB96E6C</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/stetro/learnodore.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>A79BDA5B-D364-4C6F-A670-2A572CB96E6C</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>A79BDA5B-D364-4C6F-A670-2A572CB96E6C</string>
+			<key>IDESourceControlWCCName</key>
+			<string>learnodore</string>
+		</dict>
+	</array>
+</dict>
+</plist>

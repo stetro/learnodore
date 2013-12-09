@@ -87,7 +87,7 @@
     }else{
         nf.title = @"Learnodore";
         nf.subtitle =[ NSString stringWithFormat:@"Du solltest nun deine Arbeit für %02i minuten wieder aufnehmen.",
-                      (int)[[NSUserDefaults standardUserDefaults] integerForKey:@"minues"]] ;
+                      (int)[[NSUserDefaults standardUserDefaults] integerForKey:@"minutes"]] ;
     }
     [nc deliverNotification:nf];
     
@@ -142,7 +142,7 @@
     self.clockview.percent  = 0.00;
     self.running = YES;
     self.startButton.title = @"Stop";
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:0.25 target:self selector:@selector(updateTimer) userInfo:nil repeats:YES];
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:0.25 target:self selector:@selector(updateTimer) userInfo:nil repeats:YES ];
 }
 
 - (IBAction)startOrStopSessionButton:(id)sender
