@@ -8,6 +8,6 @@ Jetzt laden und ausprobieren."
 
 [http://www.stetro-blog.de/learnodore/](http://www.stetro-blog.de/learnodore/)
 
-![](https://raw.github.com/stetro/learnodore/master/web/app.png)
+![Download](https://github.com/stetro/learnodore/archive/master.zip)
 
 
