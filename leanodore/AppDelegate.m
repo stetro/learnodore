@@ -32,6 +32,7 @@
     self.running = NO;
     self.working = YES;
     self.window.title = @"";
+    [self.window.contentView setBackgroundColor:[NSColor blackColor]];
     NSButton *button = [self.window standardWindowButton:NSWindowCloseButton];
     [button setTarget:self];
     [button setAction:@selector(closeApplication)];

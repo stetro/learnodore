@@ -10,29 +10,29 @@
 	<string>leanodore</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>A79BDA5B-D364-4C6F-A670-2A572CB96E6C</key>
-		<string>ssh://github.com/stetro/learnodore.git</string>
+		<key>714DB9D332235A39E16B71B603C4E85D6C5255AF</key>
+		<string>https://github.com/alexdobry/learnodore.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>leanodore.xcodeproj/project.xcworkspace</string>
+	<string>leanodore.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>A79BDA5B-D364-4C6F-A670-2A572CB96E6C</key>
+		<key>714DB9D332235A39E16B71B603C4E85D6C5255AF</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>ssh://github.com/stetro/learnodore.git</string>
+	<string>https://github.com/alexdobry/learnodore.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>A79BDA5B-D364-4C6F-A670-2A572CB96E6C</string>
+	<string>714DB9D332235A39E16B71B603C4E85D6C5255AF</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>A79BDA5B-D364-4C6F-A670-2A572CB96E6C</string>
+			<string>714DB9D332235A39E16B71B603C4E85D6C5255AF</string>
 			<key>IDESourceControlWCCName</key>
 			<string>learnodore</string>
 		</dict>
